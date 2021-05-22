@@ -26,7 +26,7 @@ const Publisher = ({ publish }) => {
       <Row gutter={20}>
         <Col span={12}>
           <Form.Item
-            label="Topic"
+            label="Channel"
             name="topic"
           >
             <Input />
@@ -42,7 +42,7 @@ const Publisher = ({ publish }) => {
         </Col>
         <Col span={24}>
           <Form.Item
-            label="Payload"
+            label="Message"
             name="payload"
           >
             <Input.TextArea />
