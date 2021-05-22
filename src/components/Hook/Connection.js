@@ -4,9 +4,9 @@ import { Card, Button, Form, Input, Row, Col } from 'antd';
 const Connection = ({ connect, disconnect, connectBtn }) => {
   const [form] = Form.useForm();
   const record = {
-    host: 'broker.emqx.io',
+    host: '8f3b0d5bf3764b05a63c5eb4a2ff18d0.s1.eu.hivemq.cloud',
     clientId: `mqttjs_ + ${Math.random().toString(16).substr(2, 8)}`,
-    port: 8083,
+    port: 8883,
   };
   const onFinish = (values) => {
     const { host, clientId, port, username, password } = values;
