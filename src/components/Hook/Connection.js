@@ -4,9 +4,9 @@ import { Card, Button, Form, Input, Row, Col } from 'antd';
 const Connection = ({ connect, disconnect, connectBtn }) => {
   const [form] = Form.useForm();
   const record = {
-    host: '8f3b0d5bf3764b05a63c5eb4a2ff18d0.s1.eu.hivemq.cloud',
+    host: 'a12eeb6b.us-east-1.emqx.cloud',
     clientId: `mqttjs_ + ${Math.random().toString(16).substr(2, 8)}`,
-    port: 8883,
+    port: 8083,
   };
   const onFinish = (values) => {
     const { host, clientId, port, username, password } = values;
@@ -86,7 +86,7 @@ const Connection = ({ connect, disconnect, connectBtn }) => {
             label="Password"
             name="password"
           >
-            <Input />
+            <Input.Password />
           </Form.Item>
         </Col>
       </Row>
@@ -94,6 +94,13 @@ const Connection = ({ connect, disconnect, connectBtn }) => {
   )
 
   return (
+    <>
+    <Card
+      title="MQTT based live chatting app">
+    <p>This Project has been developed by Pranjal Agrawal (2018kucp1127) and Ambaram (2018kucp1133)</p>
+
+    </Card>
+
     <Card
       title="Connection"
       actions={[
@@ -103,6 +110,8 @@ const Connection = ({ connect, disconnect, connectBtn }) => {
     >
       {ConnectionForm}
     </Card>
+    
+    </>
   );
 }
 
