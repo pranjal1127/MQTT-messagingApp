@@ -6,11 +6,11 @@ const Connection = ({ connect, disconnect, connectBtn }) => {
   const record = {
     host: 'a12eeb6b.us-east-1.emqx.cloud',
     clientId: `mqttjs_ + ${Math.random().toString(16).substr(2, 8)}`,
-    port: 8083,
+    port: 8084,
   };
   const onFinish = (values) => {
     const { host, clientId, port, username, password } = values;
-    const url = `ws://${host}:${port}/mqtt`;
+    const url = `wss://${host}:${port}/mqtt`;
     const options = {
       keepalive: 30,
       protocolId: 'MQTT',
