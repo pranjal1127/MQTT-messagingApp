@@ -7,6 +7,7 @@ const Receiver = ({ payload }) => {
   useEffect(() => {
     if (payload.topic) {
       setMessages(messages => [...messages, payload])
+      console.log(payload)
     }
   }, [payload])
 
@@ -21,7 +22,7 @@ const Receiver = ({ payload }) => {
 
   return (
     <Card
-      title="Receiver"
+      title="All Messages "
     >
       <List
         size="small"

@@ -7,7 +7,7 @@ const Subscriber = ({ sub, unSub, showUnsub }) => {
   const qosOptions = useContext(QosOption);
 
   const record = {
-    topic: 'testtopic/react',
+    topic: 'IOT304',
     qos: 0,
   };
 
@@ -48,12 +48,12 @@ const Subscriber = ({ sub, unSub, showUnsub }) => {
         <Col span={8} offset={16} style={{ textAlign: 'right' }}>
           <Form.Item>
             <Button type="primary" htmlType="submit">
-              Subscribe
+              Join Channel
             </Button>
             {
               showUnsub ?
                 <Button type="danger" style={{ marginLeft: '10px' }} onClick={handleUnsub}>
-                  Unsubscribe
+                  Leave Channel
                 </Button>
                 : null
             }
@@ -65,7 +65,7 @@ const Subscriber = ({ sub, unSub, showUnsub }) => {
 
   return (
     <Card
-      title="Subscriber"
+      title="Join Channel"
     >
       {SubForm}
     </Card>

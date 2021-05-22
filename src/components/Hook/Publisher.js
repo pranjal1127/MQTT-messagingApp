@@ -7,7 +7,7 @@ const Publisher = ({ publish }) => {
   const qosOptions = useContext(QosOption);
 
   const record = {
-    topic: 'testtopic/react',
+    topic: 'IOT304',
     qos: 0,
   };
 
@@ -51,7 +51,7 @@ const Publisher = ({ publish }) => {
         <Col span={8} offset={16} style={{ textAlign: 'right' }}>
           <Form.Item>
             <Button type="primary" htmlType="submit">
-              Publish
+              Send Message
             </Button>
           </Form.Item>
         </Col>
